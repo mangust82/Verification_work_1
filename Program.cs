@@ -18,5 +18,15 @@ string[] ThreeMas(string[] InpMas)
             n++;
         }
     }
-
+    string[] OutMas = new string[n];
+    int j = 0;
+        for(int i = 0; i < InpMas.Length; i++)
+    {
+        if (InpMas[i].Length <= 3)
+        {
+            OutMas[j] = InpMas[i];
+            j++;
+        }
+    }
+    return OutMas;
 }
