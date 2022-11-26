@@ -4,16 +4,15 @@
 string[] TestMas = new string[] {"hhhgj", "ghgghgjhghjg", "hj", "780", "jhkjhkjkj", "u"};
 
 Console.WriteLine($"[{String.Join(",", TestMas)}]");
-ThreeMas(TestMas);
-Console.WriteLine($"[{String.Join(",", ThreeMas(TestMas))}]");
+Console.WriteLine($"[{String.Join(",", ThreeMas(TestMas, 3))}]");
 
-//******************************* Method creating new array ******************************************************
-string[] ThreeMas(string[] InpMas)
+//******************************* Method filtering elements of array by length atring ******************************************************
+string[] ThreeMas(string[] InpMas, int N)
 {
     int n = 0;
     for(int i = 0; i < InpMas.Length; i++)
     {
-        if (InpMas[i].Length <= 3)
+        if (InpMas[i].Length <= N)
         {
             n++;
         }
